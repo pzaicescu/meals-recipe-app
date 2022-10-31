@@ -2,13 +2,16 @@ import React from 'react';
 import {useGlobalContext} from "../context";
 
 const Meals = () => {
-    const context = useGlobalContext();
-    console.log(context)
+    const {meals} = useGlobalContext()
     return (
-        <div>
-            <h1>Meals component</h1>
-        </div>
+        <section>
+            {meals.map((singleMeal) => {
+                console.log(singleMeal)
+                return <h4>single meal</h4>
+            })}
+        </section>
     );
 };
 
 export default Meals;
+//2:57:00
